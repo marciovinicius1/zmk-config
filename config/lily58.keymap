@@ -13,63 +13,86 @@
         spotlight: spotlight {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp SPACE>;
+            bindings = <&kp LEFT_GUI &kp SPACE>, <&macro_press>;
+
             label = "SPOTLIGHT";
         };
 
         expand_window: expand_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp V>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp V>,
+                <&macro_press>;
+
             label = "EXPAND_WINDOW";
         };
 
         next_desktop: next_desktop {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp X>;
+            bindings =
+                <&kp RCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp X>,
+                <&macro_press>;
+
             label = "NEXT_DESKTOP";
         };
 
         previous_desktop: previous_desktop {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp Z>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp Z>,
+                <&macro_press>;
+
             label = "PREVIOUS_DESKTOP";
         };
 
         new_tab: new_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp T>;
+            bindings = <&kp LEFT_GUI &kp T>, <&macro_press>;
+
             label = "NEW_TAB";
         };
 
         window_to_left: window_to_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp LEFT>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp LEFT>,
+                <&macro_press>;
+
             label = "WINDOW_TO_LEFT";
         };
 
         window_to_right: window_to_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp RIGHT_ARROW>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp RIGHT_ARROW>,
+                <&macro_press>;
+
             label = "WINDOW_TO_RIGHT";
         };
 
         window_to_top: window_to_top {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp UP_ARROW>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp UP_ARROW>,
+                <&macro_press>;
+
             label = "WINDOW_TO_TOP";
         };
 
         window_to_down: window_to_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp DOWN_ARROW>;
+            bindings =
+                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT &kp LEFT_GUI &kp DOWN_ARROW>,
+                <&macro_press>;
+
             label = "WINDOW_TO_DOWN";
         };
     };
