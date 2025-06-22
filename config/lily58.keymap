@@ -20,22 +20,57 @@
         expand_window: expand_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_GUI &kp C>;
+            bindings = <&kp TAB &kp LCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp C>;
             label = "EXPAND_WINDOW";
         };
 
         next_desktop: next_desktop {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_GUI &kp X>;
+            bindings = <&kp TAB &kp RCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp X>;
             label = "NEXT_DESKTOP";
         };
 
         previous_desktop: previous_desktop {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_GUI &kp Z>;
+            bindings = <&kp TAB &kp LCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp Z>;
             label = "PREVIOUS_DESKTOP";
+        };
+
+        new_tab: new_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp T>;
+            label = "NEW_TAB";
+        };
+
+        window_to_left: window_to_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp LCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp LEFT>;
+            label = "WINDOW_TO_LEFT";
+        };
+
+        window_to_right: window_to_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp LCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp RIGHT_ARROW>;
+            label = "WINDOW_TO_RIGHT";
+        };
+
+        window_to_top: window_to_top {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp LCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp UP_ARROW>;
+            label = "WINDOW_TO_TOP";
+        };
+
+        window_to_down: window_to_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp LCTRL &kp LEFT_SHIFT &kp LEFT_GUI &kp DOWN_ARROW>;
+            label = "WINDOW_TO_DOWN";
         };
     };
 
@@ -92,11 +127,11 @@
 
             display-name = "Raise";
             bindings = <
-&kp F1          &kp F2         &kp F3             &kp F4         &kp F5          &kp F6                        &kp F7  &kp F8    &kp F9    &kp F10  &kp F11    &kp F12
-&kp TAB         &kp N1         &kp N2             &kp N3         &kp N4          &kp N5                        &kp N6  &kp N7    &kp N8    &kp N9   &kp N0     &trans
-&kp LCTRL       &kp PAGE_DOWN  &kp PG_UP          &kp HOME       &kp END         &trans                        &trans  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &trans
-&kp LEFT_SHIFT  &trans         &previous_desktop  &next_desktop  &expand_window  &trans  &trans        &trans  &trans  &trans    &trans    &trans   &trans     &trans
-                                                  &trans         &trans          &trans  &spotlight    &trans  &trans  &trans    &trans
+&kp F1          &kp F2             &kp F3         &kp F4          &kp F5    &kp F6                        &kp F7  &kp F8           &kp F9           &kp F10         &kp F11           &kp F12
+&kp TAB         &kp N1             &kp N2         &kp N3          &kp N4    &kp N5                        &kp N6  &kp N7           &kp N8           &kp N9          &kp N0            &trans
+&kp LCTRL       &kp PAGE_DOWN      &kp PG_UP      &kp HOME        &kp END   &trans                        &trans  &kp LEFT         &kp DOWN         &kp UP          &kp RIGHT         &trans
+&kp LEFT_SHIFT  &previous_desktop  &next_desktop  &expand_window  &new_tab  &trans  &trans        &trans  &trans  &window_to_left  &window_to_down  &window_to_top  &window_to_right  &trans
+                                                  &trans          &trans    &trans  &spotlight    &trans  &trans  &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
